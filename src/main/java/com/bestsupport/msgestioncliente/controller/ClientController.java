@@ -75,7 +75,8 @@ public class ClientController {
         if (createdClient == null) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok(clientDTOConverter.convert(createdClient));
+        return ResponseEntity.created(null)
+                .body(clientDTOConverter.convert(createdClient));
     }
 
     @PutMapping("/{id}")

@@ -18,7 +18,7 @@ public class ClientDTOConverter implements Converter<Client, ClientDTO> {
     @Override
     public ClientDTO convert(@NonNull Client client) {
         return ClientDTO.builder()
-                .id(client.getId())
+                .clientId(client.getId())
                 .fullName(client.getFullName())
                 .email(client.getEmail())
                 .phoneNumber(client.getPhoneNumber())
@@ -33,7 +33,7 @@ public class ClientDTOConverter implements Converter<Client, ClientDTO> {
         }
 
         return Client.builder()
-                .id(clientDTO.getId())
+                .id(clientDTO.getClientId())
                 .fullName(clientDTO.getFullName())
                 .email(clientDTO.getEmail())
                 .phoneNumber(clientDTO.getPhoneNumber())

@@ -1,10 +1,5 @@
 package com.bestsupport.msgestioncliente.dto;
 
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.lang.Nullable;
-
-import com.bestsupport.msgestioncliente.model.Client;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClientDTO {
 
-    private Long id;
+    private Long clientId;
     private String fullName;
     private String email;
     private String phoneNumber;
