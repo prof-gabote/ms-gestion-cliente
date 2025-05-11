@@ -36,8 +36,8 @@ public class ClientController {
     private static final Logger logger = LoggerFactory.getLogger(ClientController.class);
     
     @GetMapping("/status")
-    public String getStatus() {
-        return "Client service is running";
+    public ResponseEntity<String> getStatus() {
+        return ResponseEntity.ok("Client service is running");
     }
     
     @GetMapping()
